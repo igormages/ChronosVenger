@@ -2,6 +2,11 @@
 	
 	require_once('requires.php');
 	
+	if(isset($_GET['classe']) AND !empty($_GET['classe'])) {
+		getAPI($_GET['classe']);
+		break;
+	}
+		
 ?>
 <!DOCTYPE html>
 <html lang="fr" class=" js no-touch no-android chrome no-firefox no-iemobile no-ie no-ie10 no-ie11 no-ios"><head>
@@ -27,7 +32,6 @@
     <!-- .aside -->
     <aside class="bg-dark aside-sm" id="nav">
       <section class="vbox">
-      
         <section class="w-f">
           
           <nav class="nav-primary hidden-xs">
