@@ -1,10 +1,9 @@
 <?php 
 	
 	require_once('requires.php');
-	
 	if(isset($_GET['classe']) AND !empty($_GET['classe'])) {
 		getAPI($_GET['classe']);
-		break;
+		exit;
 	}
 		
 ?>

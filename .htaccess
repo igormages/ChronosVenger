@@ -10,25 +10,5 @@ RewriteBase /
 
 #----------------------------------------------> Rwrite des URL
 
-RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^sitemap.xml?$ index.php?parametre_1=sitemap.xml [L]
-
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^ajax/(.*)/$ requires.php?file=$1 [L]
-
-
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^(.*)\??(.*)?$ index.php?url=$1&$2 [L]
-
-
-
-#----------------------------------------------> Fin rwrite
-
-
-
-#----------------------------------------------> Redirection www.____ .xx vers ____.xx
-RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
-RewriteRule ^(.*)$ http://%1/$1 [R=301,L]
-#----------------------------------------------> Fin  redirection du paramètre
+RewriteRule ^(.*)?(.*)?$ index.php?classe=$1 [L]
