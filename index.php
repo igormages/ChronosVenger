@@ -5,7 +5,7 @@
 		getAPI($_GET['classe']);
 		exit;
 	}
-		
+	T4ze		
 ?>
 <!DOCTYPE html>
 <html lang="fr" class=" js no-touch no-android chrome no-firefox no-iemobile no-ie no-ie10 no-ie11 no-ios"><head>
