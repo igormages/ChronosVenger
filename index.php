@@ -53,7 +53,7 @@
       <section class="vbox">
         <section class="scrollable wrapper">
    
-          <h1 class="m-t-none h3">ChrnosVenger</h1>
+          <h1 class="m-t-none h3">ChronosVenger</h1>
           <div class="row m-b">
             <div class="col-sm-4">              
               <div class="dd" id="nestable1">

@@ -25,13 +25,13 @@ for($n=0;$n<2;$n++)
 
 $listeClasses['PREPA']['API'] = 'API';
 
-$listeClasses['ING']['ING1']['Divers'] = "Divers";
+$listeClasses['CYCLE INGENIEUR']['ING1']['Divers'] = "Divers";
 
 for($j=0;$j<2;$j++)
 {
 	for($k=1;$k<3;$k++)
 	{
-		$listeClasses['ING']['ING1'][$lettres[$j].$k] = "ING1/GR$lettres[$j]$k";
+		$listeClasses['CYCLE INGENIEUR']['ING1'][$lettres[$j].$k] = "ING1/GR$lettres[$j]$k";
 	}
 }
 
@@ -40,8 +40,16 @@ $majeures = array('DIVERS','CSI', 'GISTRE', 'GITM', 'MTI', 'SCIA', 'SIGL', 'SRS'
 
 for($i=0;$i<sizeof($majeures);$i++)
 {
-	$listeClasses['ING']['MAJEURES'][$majeures[$i]] = "$majeures[$i]";
+	$listeClasses['CYCLE INGENIEUR']['MAJEURES'][$majeures[$i]] = "$majeures[$i]";
 }
+
+
+$listeClasses['CYCLE INGENIEUR']['APPRENTIS']['DIVERS'] = "*DIVERS/APPING";
+for($i=1;$i<4;$i++)
+{
+	$listeClasses['CYCLE INGENIEUR']['APPRENTIS']["APPING$i"] = "APPING $i";
+}
+
 
 
 
