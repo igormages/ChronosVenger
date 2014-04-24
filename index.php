@@ -10,7 +10,7 @@
 <!DOCTYPE html>
 <html lang="fr" class=""><head>
   <meta charset="utf-8">
-  <title>ChrnosVenger - Chronos for calendar by Igor Magès & T4ze</title>
+  <title>ChronosVenger - Chronos for calendar by Igor Magès & T4ze</title>
   <meta name="description" content="Use chrnos on yours calendars, gmail, iOS...">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
@@ -65,7 +65,7 @@
       <section class="vbox">
         <section class="scrollable wrapper">
 
-          <h1 class="m-t-none h3" style="margin: 1em 1em 2em 1em;">ChrnosVenger <small>powered by Igor Magès & T4ze</small></h1>
+          <h1 class="m-t-none h3" style="margin: 1em 1em 2em 1em;">ChronosVenger <small>powered by Igor Magès & T4ze</small></h1>
 		  <div class="col-sm-4">		        		
 			<div class="panel">
 			    	<header class="panel-heading bg-primary dker no-borders">
@@ -79,7 +79,7 @@
 			  
 				
 			    	<div class="panel-body">
-			    		<p class="lead">ChrnosVenger intègre votre emploi du temps à votre calendrier! </p>
+			    		<p class="lead">ChronosVenger intègre votre emploi du temps à votre calendrier! </p>
 			    		<p>Il vous préviens quand sera votre prochain cours, avec qui et dans quelle salle !</p> <p>De plus certains smartphones vous avertiront le temps de trajet nécessaire afin d'arriver en cours ! Plus jamais de retard ou de petit oubli !</p>
 			    		
 			    		<h4 class="lineInfo"><i class="fa fa-crosshairs"></i>Choisissez une classe</h4>
@@ -156,7 +156,7 @@
 		                            
 		                            <article class="media">
 		                              <div class="media-body">                        
-		                                <p><span class="font-semibold">Étape 3:</span> Coller l'URL fournie par ChrnosVenger</p>
+		                                <p><span class="font-semibold">Étape 3:</span> Coller l'URL fournie par ChronosVenger</p>
 		                              	<a class="zoombox" href="images/etape2.png"><img src="images/etape2.png"></a>
 		                              </div>
 		                            </article>
@@ -200,7 +200,7 @@
 		                            </article>
 		                            <div class="line line-dashed"></div>
 		                              <div class="media-body">                        
-		                                <p><span class="font-semibold">Étape 3:</span> Coller l'URL fournie par ChrnosVenger</p>
+		                                <p><span class="font-semibold">Étape 3:</span> Coller l'URL fournie par ChronosVenger</p>
 										<a class="zoombox" href="images/etape2-android.png"><img src="images/etape2-android.png"></a>
 		                              </div>
 		                            </article>
@@ -228,7 +228,7 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        <h4 class="modal-title">ChrnosVenger</h4>
+        <h4 class="modal-title">ChronosVenger</h4>
       </div>
       <div class="modal-body">
         <div class="form-group">
@@ -274,7 +274,7 @@
 			
 			$('.calendarAdd').click(function() {
 				classeName = $(this).attr('data-chronos');
-				$('.urlPlanning').val('http://ChrnosVenger.com/' + classeName);
+				$('.urlPlanning').val('http://ChronosVenger.com/' + classeName);
 				$('.linkPane').slideDown();
 				$('.linkPane .form-group').addClass('has-success');
 				$('.modal').modal('show');
@@ -287,7 +287,7 @@
 	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 	
-	  ga('create', 'UA-50355045-1', 'chrnosvenger.com');
+	  ga('create', 'UA-50355045-1', 'ChronosVenger.com');
 	  ga('send', 'pageview');
 	</script>
 </body></html>
