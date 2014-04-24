@@ -4,14 +4,13 @@
 	if(isset($_GET['classe']) AND !empty($_GET['classe'])) {
 		getAPI($_GET['classe']);
 		exit;
-	}
-	//T4ze		
+	}	
 ?>
 <!DOCTYPE html>
 <html lang="fr" class=""><head>
   <meta charset="utf-8">
   <title>ChronosVenger - Chronos for calendar by Igor Magès & T4ze</title>
-  <meta name="description" content="Use chrnos on yours calendars, gmail, iOS...">
+  <meta name="description" content="Use chronos on yours calendars, gmail, iOS...">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
   <link rel="stylesheet" href="css/animate.css" type="text/css">

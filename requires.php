@@ -44,8 +44,8 @@
         $cal->setProperty( "X-WR-CALDESC", 'EPITA Chronos');
         $cal->setProperty( "X-WR-TIMEZONE", "Europe/Paris" ); // Fuseau Horaire
        
-        for($semaine = 0; $semaine < 5; $semaine++):
-                $ch = curl_init('http://ichronos.in/?s='.$classe.'&w='.(date('w')+$semaine+13).'&api');
+        for($semaine = 0; $semaine < 10; $semaine++):
+                $ch = curl_init('http://ichronos.in/?s='.$classe.'&w='.(date('w')+$semaine+30).'&api');
                 $options = array(
                         CURLOPT_RETURNTRANSFER => true,
                         CURLOPT_HTTPHEADER => array('Content-type: application/json') ,
