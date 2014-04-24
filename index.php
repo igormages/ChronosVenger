@@ -79,7 +79,7 @@
 			  
 				
 			    	<div class="panel-body">
-			    		<p class="lead">ChrnosVenger, intégrez votre emploi du temps à votre calendrier! </p>
+			    		<p class="lead">ChrnosVenger intègre votre emploi du temps à votre calendrier! </p>
 			    		<p>Il vous préviens quand sera votre prochain cours, avec qui et dans quelle salle !</p> <p>De plus certains smartphones vous avertiront le temps de trajet nécessaire afin d'arriver en cours ! Plus jamais de retard ou de petit oubli !</p>
 			    		
 			    		<h4 class="lineInfo"><i class="fa fa-crosshairs"></i>Choisissez une classe</h4>
