@@ -53,9 +53,9 @@
     <section id="content">
       <section class="vbox">
         <section class="scrollable wrapper">
-   
 
           <h1 class="m-t-none h3">ChrnosVenger <small>powered by Igor Magès & T4ze</small></h1>
+
           <div class="row m-b">
             <div class="col-sm-4">              
              	 <div class="dd" id="nestable1">
