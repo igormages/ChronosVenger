@@ -24,7 +24,7 @@
 	        }
 	        else {
 	        	echo '<ol class="dd-list">';
-		        	echo '<li class="dd-item"><div class="dd-handle dd-nodrag"><a href="'.$item.'">'.$item.'</a></div></li>';
+		        	echo '<li class="dd-item"><div class="dd-handle dd-nodrag"><a href="#'.$item.'" class="calendarAdd" data-chronos="'.$item.'">'.$item.'</a></div></li>';
 	        	echo '</ol>';
 	        }
 	        
