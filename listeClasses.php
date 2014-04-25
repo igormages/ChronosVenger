@@ -19,22 +19,22 @@ for($n=0;$n<2;$n++)
 			{
 				for($k=1;$k<3;$k++)
 				{
-					$listeClasses['Stagiaires']['Epita']['PREPA'][$niveau[$n]][$lettres[$i]][$j][$k] = "INFO$niveau[$n]$lettres[$i]$j-$k";
+					$listeClasses['Epita']['PREPA'][$niveau[$n]][$lettres[$i]][$j][$k] = "INFO$niveau[$n]$lettres[$i]$j-$k";
 				}
 			}
 		}
 	}
 }
 
-$listeClasses['Stagiaires']['Epita']['PREPA']['API'] = 'API';
+$listeClasses['Epita']['PREPA']['API'] = 'API';
 
-$listeClasses['Stagiaires']['Epita']['CYCLE INGENIEUR']['ING1']['Divers'] = "Divers";
+$listeClasses['Epita']['CYCLE INGENIEUR']['ING1']['Divers'] = "Divers";
 
 for($j=0;$j<2;$j++)
 {
 	for($k=1;$k<3;$k++)
 	{
-		$listeClasses['Stagiaires']['Epita']['CYCLE INGENIEUR']['ING1'][$lettres[$j].$k] = "ING1/GR$lettres[$j]$k";
+		$listeClasses['Epita']['CYCLE INGENIEUR']['ING1'][$lettres[$j].$k] = "ING1/GR$lettres[$j]$k";
 	}
 }
 
@@ -43,29 +43,29 @@ $majeures = array('DIVERS','CSI', 'GISTRE', 'GITM', 'MTI', 'SCIA', 'SIGL', 'SRS'
 
 for($i=0;$i<sizeof($majeures);$i++)
 {
-	$listeClasses['Stagiaires']['Epita']['CYCLE INGENIEUR']['MAJEURES'][$majeures[$i]] = "$majeures[$i]";
+	$listeClasses['Epita']['CYCLE INGENIEUR']['MAJEURES'][$majeures[$i]] = "$majeures[$i]";
 }
 
 
-$listeClasses['Stagiaires']['Epita']['CYCLE INGENIEUR']['APPRENTIS']['DIVERS'] = "*DIVERS/APPING";
+$listeClasses['Epita']['CYCLE INGENIEUR']['APPRENTIS']['DIVERS'] = "*DIVERS/APPING";
 for($i=1;$i<4;$i++)
 {
-	$listeClasses['Stagiaires']['Epita']['CYCLE INGENIEUR']['APPRENTIS']["APPING$i"] = "APPING $i";
+	$listeClasses['Epita']['CYCLE INGENIEUR']['APPRENTIS']["APPING$i"] = "APPING $i";
 }
 
 
 
 
 
-$listeClasses['Stagiaires']['Epita']['PREPA']['API'] = 'API';
+$listeClasses['Epita']['PREPA']['API'] = 'API';
 
-$listeClasses['Stagiaires']['Epita']['CYCLE INGENIEUR']['ING1']['Divers'] = "Divers";
+$listeClasses['Epita']['CYCLE INGENIEUR']['ING1']['Divers'] = "Divers";
 
 for($j=0;$j<2;$j++)
 {
 	for($k=1;$k<3;$k++)
 	{
-		$listeClasses['Stagiaires']['Epita']['CYCLE INGENIEUR']['ING1'][$lettres[$j].$k] = "ING1/GR$lettres[$j]$k";
+		$listeClasses['Epita']['CYCLE INGENIEUR']['ING1'][$lettres[$j].$k] = "ING1/GR$lettres[$j]$k";
 	}
 }
 
@@ -74,14 +74,14 @@ $majeures = array('DIVERS','CSI', 'GISTRE', 'GITM', 'MTI', 'SCIA', 'SIGL', 'SRS'
 
 for($i=0;$i<sizeof($majeures);$i++)
 {
-	$listeClasses['Stagiaires']['Epita']['CYCLE INGENIEUR']['MAJEURES'][$majeures[$i]] = "$majeures[$i]";
+	$listeClasses['Epita']['CYCLE INGENIEUR']['MAJEURES'][$majeures[$i]] = "$majeures[$i]";
 }
 
 
-$listeClasses['Stagiaires']['Epita']['CYCLE INGENIEUR']['APPRENTIS']['DIVERS'] = "*DIVERS/APPING";
+$listeClasses['Epita']['CYCLE INGENIEUR']['APPRENTIS']['DIVERS'] = "*DIVERS/APPING";
 for($i=1;$i<4;$i++)
 {
-	$listeClasses['Stagiaires']['Epita']['CYCLE INGENIEUR']['APPRENTIS']["APPING$i"] = "APPING $i";
+	$listeClasses['Epita']['CYCLE INGENIEUR']['APPRENTIS']["APPING$i"] = "APPING $i";
 }
 
 
@@ -94,19 +94,19 @@ for($i=1;$i<4;$i++)
 
 
 
-$listeClasses['Stagiaires']['Epitech']['Divers'] = "DIVERS/EPITECH";
-$listeClasses['Stagiaires']['Epitech']['PSO1'] = "PSO1";
+$listeClasses['Epitech']['Divers'] = "DIVERS/EPITECH";
+$listeClasses['Epitech']['PSO1'] = "PSO1";
 
 
 for($i=1;$i<7;$i++)
 {
-	$listeClasses['Stagiaires']['Epitech']["TECH$i"] = "TECH$i";
+	$listeClasses['Epitech']["TECH$i"] = "TECH$i";
 }
 
-$listeClasses['Stagiaires']['Epitech']["TECH3S"] = "TECH3S";
-$listeClasses['Stagiaires']['Epitech']["TECH3SI"] = "TECH3SI";
-$listeClasses['Stagiaires']['Epitech']["W@C#1"] = "W@C#1";
-$listeClasses['Stagiaires']['Epitech']["W@C#2"] = "W@C#2";
+$listeClasses['Epitech']["TECH3S"] = "TECH3S";
+$listeClasses['Epitech']["TECH3SI"] = "TECH3SI";
+$listeClasses['Epitech']["W@C#1"] = "W@C#1";
+$listeClasses['Epitech']["W@C#2"] = "W@C#2";
 
 
 ?>
