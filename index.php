@@ -80,7 +80,8 @@
 				
 			    	<div class="panel-body">
 			    		<p class="lead">ChronosVenger intègre votre emploi du temps à votre calendrier! </p>
-			    		<p>Il vous préviens quand sera votre prochain cours, avec qui et dans quelle salle !</p> <p>De plus certains smartphones vous avertiront le temps de trajet nécessaire afin d'arriver en cours ! Plus jamais de retard ou de petit oubli !</p>
+			    		<p>Ce calendrier intelligent vous annonce quand aura lieu votre prochain cours, avec qui et dans quelle salle !</p>
+						<p>De plus, certains smartphones irons jusqu'à vous avertir du temps de trajet nécessaire afin d'arriver à vos cours ! Plus jamais de retard ou de petit oubli !</p>
 			    		
 			    		<h4 class="lineInfo"><i class="fa fa-crosshairs"></i>Choisissez une classe</h4>
 			    		<h4 class="lineInfo"><i class="fa fa-calendar"></i>Abonnez vous au planning</h4>
@@ -94,7 +95,7 @@
 			    	<header class="panel-heading bg-primary dker no-borders">
 			            <div class="clearfix">
 			              <div class="clear">
-			                <div class="h4 m-t-xs m-b-xs">2. Choisissez votre classe</div>
+			                <div class="h4 m-t-xs m-b-xs">2. Choisir sa classe</div>
 			                <small class="text-muted"></small>
 			              </div>                
 			            </div>
@@ -189,7 +190,7 @@
 				            	<div class="panel-body help">
 		                            <article class="media">
 		                              <div class="media-body">                        
-		                                <p><span class="font-semibold">Étape 1:</span> Ouvrir Calendrier</p>
+		                                <p><span class="font-semibold">Étape 1:</span> Ouvrez votre Calendrier</p>
 										<a class="zoombox" href="images/etape0.png"><img src="images/etape0.png"></a>
 		                              </div>
 		                            </article>
@@ -197,7 +198,7 @@
 		                            
 		                            <article class="media">
 		                              <div class="media-body">                        
-		                                <p><span class="font-semibold">Étape 2:</span> Ajouter un nouvel abonnement</p>
+		                                <p><span class="font-semibold">Étape 2:</span> Ajoutez un nouvel abonnement</p>
 		                              	<a class="zoombox" href="images/etape1.png"><img src="images/etape1.png"></a>
 		                              </div>
 		                            </article>
@@ -205,7 +206,7 @@
 		                            
 		                            <article class="media">
 		                              <div class="media-body">                        
-		                                <p><span class="font-semibold">Étape 3:</span> Coller l'URL fournie par ChronosVenger</p>
+		                                <p><span class="font-semibold">Étape 3:</span> Collez l'URL fournie par ChronosVenger</p>
 		                              	<a class="zoombox" href="images/etape2.png"><img src="images/etape2.png"></a>
 		                              </div>
 		                            </article>
@@ -213,7 +214,7 @@
 		                            
 		                            <article class="media">
 		                              <div class="media-body">                        
-		                                <p><span class="font-semibold">Étape 4:</span>  <br />(1) Opter pour une configuration "iCloud" pour un accès sur vos iPhone ou iPad. <br />(2) Puis choisissez une actualisation automatique pour des emplois du temps toujours à jour !<br /> NB: Notre cache se met à jour toutes les 24h, nous vous conseillons une mise à jour quotidienne. </p>
+		                                <p><span class="font-semibold">Étape 4:</span>  <br />(1) Opter pour une configuration "iCloud" pour un accès sur vos iPhone ou iPad. <br />(2) Puis choisissez une actualisation automatique pour des emplois du temps toujours à jour !<br /> NB: Notre cache se met à jour toutes les 24h, nous vous conseillons donc une mise à jour quotidienne. </p>
 										<a class="zoombox" href="images/etape3.png"><img src="images/etape3.png"></a>
 		                              </div>
 		                            </article>
@@ -243,13 +244,13 @@
 		                            
 		                            <article class="media">
 		                              <div class="media-body">                        
-		                                <p><span class="font-semibold">Étape 2:</span> Ajouter un nouvel agenda par URL</p>
+		                                <p><span class="font-semibold">Étape 2:</span> Ajoutez un nouvel agenda par URL</p>
 		                              	<a class="zoombox" href="images/etape1-android.png"><img src="images/etape1-android.png"></a>
 		                              </div>
 		                            </article>
 		                            <div class="line line-dashed"></div>
 		                              <div class="media-body">                        
-		                                <p><span class="font-semibold">Étape 3:</span> Coller l'URL fournie par ChronosVenger</p>
+		                                <p><span class="font-semibold">Étape 3:</span> Collez l'URL fournie par ChronosVenger</p>
 										<a class="zoombox" href="images/etape2-android.png"><img src="images/etape2-android.png"></a>
 		                              </div>
 		                            </article>
