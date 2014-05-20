@@ -11,4 +11,4 @@ RewriteBase /
 #----------------------------------------------> Rwrite des URL
 
 RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^(.*)?$ index.php?classe=$1 [L]
+RewriteRule ^(.*).ics$ index.php?classe=$1 [L]

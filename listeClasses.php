@@ -5,13 +5,13 @@
 
 //  -------------  EPITA -----------------------
 
-$lettres = array('A','B','C','D','I');
+$lettres = array('A','B','C','D');
 $niveau = array('SUP','SPE');
 
 
 for($n=0;$n<2;$n++)
 {
-	for($i=0;$i<5;$i++)
+	for($i=0;$i<4;$i++)
 	{
 		if($niveau[$n] != 'SPE' || $lettres[$i] != 'D')
 		{
@@ -19,22 +19,44 @@ for($n=0;$n<2;$n++)
 			{
 				for($k=1;$k<3;$k++)
 				{
-					$listeClasses['Stagiaires']['Epita']['PREPA'][$niveau[$n]][$lettres[$i]][$j][$k] = "INFO$niveau[$n]$lettres[$i]$j-$k";
+					$listeClasses['EPITA']['PREPA'][$niveau[$n]][$lettres[$i]][$j][$k] = "INFO$niveau[$n]$lettres[$i]$j-$k";
 				}
 			}
 		}
 	}
 }
 
-$listeClasses['Stagiaires']['Epita']['PREPA']['API'] = 'API';
+$listeClasses['EPITA']['PREPA']['SUP']['I'][1] = "INFOSUPI-1";
+$listeClasses['EPITA']['PREPA']['SUP']['I'][2] = "INFOSUPI-2";
+$listeClasses['EPITA']['PREPA']['SPE']['I'] = "INFOSPEI";
 
-$listeClasses['Stagiaires']['Epita']['CYCLE INGENIEUR']['ING1']['Divers'] = "Divers";
+for($j=1;$j<3;$j++)
+{
+	for($k=1;$k<3;$k++)
+	{
+		$listeClasses['EPITA']['PREPA']['INFO#']['INFOSUP#']["INFOSUPS$j#-$k"] = "INFOSUPS$j#-$k";
+	}
+}
+$listeClasses['EPITA']['PREPA']['INFO#']['INFOSPE#']['INFOSPES3#'] = "INFOSUPS3#";
+$listeClasses['EPITA']['PREPA']['INFO#']['INFOSPE#']['INFOSPES4#'] = "INFOSUPS4#";
+
+
+
+$listeClasses['EPITA']['PREPA']['API'] = 'API';
+
+
+// --------- EPITA - ING
+
+
+
+
+$listeClasses['EPITA']['CYCLE INGENIEUR']['ING1']['Divers'] = "Divers";
 
 for($j=0;$j<2;$j++)
 {
 	for($k=1;$k<3;$k++)
 	{
-		$listeClasses['Stagiaires']['Epita']['CYCLE INGENIEUR']['ING1'][$lettres[$j].$k] = "ING1/GR$lettres[$j]$k";
+		$listeClasses['EPITA']['CYCLE INGENIEUR']['ING1'][$lettres[$j].$k] = "ING1/GR$lettres[$j]$k";
 	}
 }
 
@@ -43,49 +65,15 @@ $majeures = array('DIVERS','CSI', 'GISTRE', 'GITM', 'MTI', 'SCIA', 'SIGL', 'SRS'
 
 for($i=0;$i<sizeof($majeures);$i++)
 {
-	$listeClasses['Stagiaires']['Epita']['CYCLE INGENIEUR']['MAJEURES'][$majeures[$i]] = "$majeures[$i]";
+	$listeClasses['EPITA']['CYCLE INGENIEUR']['MAJEURES'][$majeures[$i]] = "$majeures[$i]";
 }
 
 
-$listeClasses['Stagiaires']['Epita']['CYCLE INGENIEUR']['APPRENTIS']['DIVERS'] = "*DIVERS/APPING";
+$listeClasses['EPITA']['CYCLE INGENIEUR']['APPRENTIS']['DIVERS'] = "*DIVERS/APPING";
 for($i=1;$i<4;$i++)
 {
-	$listeClasses['Stagiaires']['Epita']['CYCLE INGENIEUR']['APPRENTIS']["APPING$i"] = "APPING $i";
+	$listeClasses['EPITA']['CYCLE INGENIEUR']['APPRENTIS']["APPING$i"] = "APPING $i";
 }
-
-
-
-
-
-$listeClasses['Stagiaires']['Epita']['PREPA']['API'] = 'API';
-
-$listeClasses['Stagiaires']['Epita']['CYCLE INGENIEUR']['ING1']['Divers'] = "Divers";
-
-for($j=0;$j<2;$j++)
-{
-	for($k=1;$k<3;$k++)
-	{
-		$listeClasses['Stagiaires']['Epita']['CYCLE INGENIEUR']['ING1'][$lettres[$j].$k] = "ING1/GR$lettres[$j]$k";
-	}
-}
-
-$majeures = array('DIVERS','CSI', 'GISTRE', 'GITM', 'MTI', 'SCIA', 'SIGL', 'SRS', 'TCOM');
-
-
-for($i=0;$i<sizeof($majeures);$i++)
-{
-	$listeClasses['Stagiaires']['Epita']['CYCLE INGENIEUR']['MAJEURES'][$majeures[$i]] = "$majeures[$i]";
-}
-
-
-$listeClasses['Stagiaires']['Epita']['CYCLE INGENIEUR']['APPRENTIS']['DIVERS'] = "*DIVERS/APPING";
-for($i=1;$i<4;$i++)
-{
-	$listeClasses['Stagiaires']['Epita']['CYCLE INGENIEUR']['APPRENTIS']["APPING$i"] = "APPING $i";
-}
-
-
-
 
 
 
@@ -94,19 +82,20 @@ for($i=1;$i<4;$i++)
 
 
 
-$listeClasses['Stagiaires']['Epitech']['Divers'] = "DIVERS/EPITECH";
-$listeClasses['Stagiaires']['Epitech']['PSO1'] = "PSO1";
+$listeClasses['Epitech']['Divers'] = "DIVERS/EPITECH";
+$listeClasses['Epitech']['PSO1'] = "PSO1";
 
 
 for($i=1;$i<7;$i++)
 {
-	$listeClasses['Stagiaires']['Epitech']["TECH$i"] = "TECH$i";
+	$listeClasses['Epitech']["TECH$i"] = "TECH$i";
 }
 
-$listeClasses['Stagiaires']['Epitech']["TECH3S"] = "TECH3S";
-$listeClasses['Stagiaires']['Epitech']["TECH3SI"] = "TECH3SI";
-$listeClasses['Stagiaires']['Epitech']["W@C#1"] = "W@C#1";
-$listeClasses['Stagiaires']['Epitech']["W@C#2"] = "W@C#2";
+$listeClasses['Epitech']["TECH3S"] = "TECH3S";
+$listeClasses['Epitech']["TECH3SI"] = "TECH3SI";
+$listeClasses['Epitech']["W@C#1"] = "W@C#1";
+$listeClasses['Epitech']["W@C#2"] = "W@C#2";
+
 
 
 ?>

@@ -2,7 +2,8 @@
 	
 	require_once('requires.php');
 	if(isset($_GET['classe']) AND !empty($_GET['classe'])) {
-		getAPI($_GET['classe']);
+		$classe = str_replace('.ics', '', $_GET['classe']);
+		echo calendrier(array('classe' => $classe, 'semaine' => (0)));
 		exit;
 	}	
 ?>
@@ -129,7 +130,56 @@
 				            	<header class="panel-heading bg-info dker no-borders helpExpander">
 			                        <div class="clearfix">
 			                          <div class="clear">
-			                            <div class="h4 m-t-xs m-b-xs">iOS, OS X & iCloud</div>
+			                            <div class="h4 m-t-xs m-b-xs">iOS</div>
+			                            <small class="text-muted"></small>
+			                          </div>                
+			                        </div>
+								</header>
+	                      
+			            	
+				            	<div class="panel-body help">
+		                            <article class="media">
+		                              <div class="media-body">                        
+		                                <p><span class="font-semibold">Étape 1:</span> Ouvrez Réglages > Mail, Contacts, Calendrier</p>
+		                              </div>
+		                            </article>
+		                            <div class="line line-dashed"></div>
+		                            
+		                            <article class="media">
+		                              <div class="media-body">                        
+		                                <p><span class="font-semibold">Étape 2:</span> Ajouter un compte</p>
+		                              </div>
+		                            </article>
+		                            <div class="line line-dashed"></div>
+		                            
+		                            <article class="media">
+		                              <div class="media-body">                        
+		                                <p><span class="font-semibold">Étape 3:</span> Choisissez Autre</p>
+		                              </div>
+		                            </article>
+		                            <div class="line line-dashed"></div>
+		                            
+		                            <article class="media">
+		                              <div class="media-body">                        
+		                                <p><span class="font-semibold">Étape 4:</span> Sélectionnez la dernière option: "Ajouter un calendrier avec abonnement"</p>
+		                              </div>
+		                            </article>
+		                            <div class="line line-dashed"></div>
+		                            
+		                            <article class="media">
+		                              <div class="media-body">                        
+		                                <p><span class="font-semibold">Étape 5:</span> Coller l'URL fournie par ChronosVenger</p>
+		                              	<a class="zoombox" href="images/etape5-ios.png"><img src="images/etape5-ios.png"></a>
+		                              </div>
+		                            </article>
+		                            <div class="line line-dashed"></div>
+								</div>
+			            	</div>
+			        		<div class="panel">
+				            	<header class="panel-heading bg-info dker no-borders helpExpander">
+			                        <div class="clearfix">
+			                          <div class="clear">
+			                            <div class="h4 m-t-xs m-b-xs">OS X & iCloud</div>
 			                            <small class="text-muted"></small>
 			                          </div>                
 			                        </div>
@@ -273,7 +323,7 @@
 			
 			$('.calendarAdd').click(function() {
 				classeName = $(this).attr('data-chronos');
-				$('.urlPlanning').val('http://ChronosVenger.com/' + classeName);
+				$('.urlPlanning').val('http://ChronosVenger.com/' + classeName + '.ics');
 				$('.linkPane').slideDown();
 				$('.linkPane .form-group').addClass('has-success');
 				$('.modal').modal('show');
