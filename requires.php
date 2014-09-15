@@ -7,8 +7,22 @@
 	}	
 	require_once('listeClasses.php');
 	
-	function printClasses($array){
-	    foreach($array as $name => $item){
+	
+	
+ 
+    /**
+        @function printClasses
+ 
+        @param array           listeDesClasses     Tableau avec la liste des classes
+ 
+        @return string
+ 
+        Retourne une liste ordonnée des classes en text/html à partir d'un tableau
+    **/
+	
+	
+	function printClasses($listeDesClasses){
+	    foreach($listeDesClasses as $name => $item){
 	        if(is_array($item)){
 	            echo '<ol class="dd-list">';
 	
@@ -24,13 +38,23 @@
 	        }
 	        else {
 	        	echo '<ol class="dd-list">';
-		        	echo '<li class="dd-item"><div class="dd-handle dd-nodrag"><a href="#'.$item.'" class="calendarAdd" data-chronos="'.$item.'">'.$item.'</a></div></li>';
+		        	echo '<li class="dd-item"><div class="dd-handle dd-nodrag"><a href="#'.$item.'" class="calendarAdd" data-chronos="'.urlencode($item).'">'.$item.'</a></div></li>';
 	        	echo '</ol>';
 	        }
 	        
 	    }
 	}
-	
+    
+    /**
+        @function calendrier
+ 
+        @param array           $classe = array('classe' => PROMPT, $semaine => PROMPT?)     Tableau avec la classe demandé
+ 
+        @return void		   
+ 
+       Récupère les événements, puis enclanche le téléchargement du fichier ics
+    **/
+    	
 	function calendrier($classe) {
         require_once 'iCalcreator.class.php';
        
@@ -43,13 +67,14 @@
         $cal->setProperty( "X-WR-CALDESC", 'EPITA Chronos');
         $cal->setProperty( "X-WR-TIMEZONE", "Europe/Paris" ); // Fuseau Horaire
        
-        for($semaine = 0; $semaine < 10; $semaine++):
-        		$filename = cache(array('classe' => $classe, 'semaine' => $semaine));
+        //for($semaine = 0; $semaine < 10; $semaine++):
+        		//$filename = cache(array('classe' => $classe, 'semaine' => $semaine));
+				$url = 'http://ichronos.in/?s='.$classe.'&api';
+				$result = file_get_contents($url);
 				
-				$result = file_get_contents($filename);
+				//$result = file_get_contents($filename);
 				$result = json_decode($result, TRUE);
-
-                foreach($result as $event):
+				foreach($result as $event):
                         $date = date_parse_from_format('d/m/Y H:i',$event[0].' '.str_replace('h', ':', $event[1]));
                         $datePlageHoraire = date_parse_from_format('H\hi', $event[2]);
                         $datePlageHoraire = $datePlageHoraire['hour']*3600+$datePlageHoraire['minute']*60;
@@ -74,13 +99,46 @@
                         $vevent->setProperty( 'description', $event[6]);
                
                 endforeach;
-        endfor;
+                
+			for($semaine = 0; $semaine < 10; $semaine++):
+				$url = 'http://ichronos.in/?s='.$classe.'&api'.'&w='.(date('w')+$semaine+1);
+				$result = file_get_contents($url);
+				
+				//$result = file_get_contents($filename);
+				$result = json_decode($result, TRUE);
+				foreach($result as $event):
+                        $date = date_parse_from_format('d/m/Y H:i',$event[0].' '.str_replace('h', ':', $event[1]));
+                        $datePlageHoraire = date_parse_from_format('H\hi', $event[2]);
+                        $datePlageHoraire = $datePlageHoraire['hour']*3600+$datePlageHoraire['minute']*60;
+                       
+                        $date_end = mktime ($date['hour'], $date['minute'], 0, $date['month'], $date['day'], $date['year']) + $datePlageHoraire;
+                       
+                        $date_end = array(
+                                'year' => date('Y', $date_end),
+                                'month' => date('m', $date_end),
+                                'day' => date('d', $date_end),
+                                'hour' => date('H', $date_end),
+                                'minute' => date('i', $date_end),
+                        );
+						
+                        $vevent = & $cal->newComponent( 'vevent' );
+                        $start = array('year' => $date['year'], 'month'=> $date['month'], 'day'=> $date['day'], 'hour'=> $date['hour'], 'min'=> $date['minute'], 'sec'=> 0);
+                        $end = array('year' => $date_end['year'], 'month'=> $date_end['month'], 'day'=> $date_end['day'], 'hour'=> $date_end['hour'], 'min'=> $date_end['minute'], 'sec'=> 0);
+                        $vevent->setProperty( 'dtstart', $start );
+                        $vevent->setProperty( 'dtend', $end );
+                        $vevent->setProperty( 'LOCATION', $event[7]);
+                        $vevent->setProperty( 'summary', $event[4]);
+                        $vevent->setProperty( 'description', $event[6]);
+               
+                endforeach;
+                
+			endfor;
                        
         return  $cal->returnCalendar(); 
 
 	}
 	function getAPI($classe) {
-		$url = 'http://ichronos.in/?s='.$classe['classe'].'&w='.(date('w')+$classe['semaine']+35).'&api';
+		$url = 'http://ichronos.in/?s='.$classe['classe'].'&w='.(date('w')+$classe['semaine']+1).'&api';
 		/*
 $ch = curl_init('http://ichronos.in/?s='.$classe['classe'].'&w='.(date('w')+$classe['semaine']+35).'&api');
         $options = array(

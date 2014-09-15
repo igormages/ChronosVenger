@@ -5,7 +5,7 @@
 
 //  -------------  EPITA -----------------------
 
-$lettres = array('A','B','C','D');
+$lettres = array('A','B','C','D','E');
 $niveau = array('SUP','SPE');
 
 
@@ -13,7 +13,7 @@ for($n=0;$n<2;$n++)
 {
 	for($i=0;$i<4;$i++)
 	{
-		if($niveau[$n] != 'SPE' || $lettres[$i] != 'D')
+		if($niveau[$n] != 'SPE' || $i < 3)
 		{
 			for($j=1;$j<3;$j++)
 			{
@@ -26,9 +26,8 @@ for($n=0;$n<2;$n++)
 	}
 }
 
-$listeClasses['EPITA']['PREPA']['SUP']['I'][1] = "INFOSUPI-1";
-$listeClasses['EPITA']['PREPA']['SUP']['I'][2] = "INFOSUPI-2";
-$listeClasses['EPITA']['PREPA']['SPE']['I'] = "INFOSPEI";
+$listeClasses['EPITA']['PREPA']['SPE']['E'][1] = "INFOSPEE-1";
+$listeClasses['EPITA']['PREPA']['SPE']['E'][2] = "INFOSPEE-2";
 
 for($j=1;$j<3;$j++)
 {
