@@ -11,7 +11,7 @@ $niveau = array('SUP','SPE');
 
 for($n=0;$n<2;$n++)
 {
-	for($i=0;$i<4;$i++)
+	for($i=0;$i<5;$i++)
 	{
 		if($niveau[$n] != 'SPE' || $i < 3)
 		{
