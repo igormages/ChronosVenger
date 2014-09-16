@@ -103,13 +103,36 @@
 					<div class="panel-body">       
 						<div class="dd" id="nestable1">
 						<?php 
-						
-						
-						printClasses($listeClasses);
+							printClasses($listeClasses);
 						?>
-						
 						</div>
+						
 					</div>
+            	</div>
+            	<div class="panel">
+			    	<header class="panel-heading bg-primary dker no-borders">
+			            <div class="clearfix">
+			              <div class="clear">
+			                <div class="h4 m-t-xs m-b-xs">Vous ne trouvez pas votre classe ?</div>
+			                <small class="text-muted"></small>
+			              </div>                
+			            </div>
+					</header>  
+					<div class="panel-body">
+						<form class="bs-example form-horizontal">
+							<div class="form-group">
+								<div class="col-lg-12">
+									<input type="text" class="form-control obtenir_calendrier_name" placeholder="Ex.: Gibert Juliette">
+									<span class="help-block m-b-none">Entrez votre nom si vous êtes formateur, votre classe, ou votre salle.</span>
+								</div>
+							</div>
+							<div class="form-group">
+									<div class="col-lg-offset-3 col-lg-9">
+										<button type="button" class="btn btn-sm btn-default obtenir_calendrier">Obtenir mon calendrier !</button>
+									</div>
+							</div>
+						</form>
+                    </div>
             	</div>
 				
             </div>
@@ -324,6 +347,13 @@
 			
 			$('.calendarAdd').click(function() {
 				classeName = $(this).attr('data-chronos');
+				$('.urlPlanning').val('http://ChronosVenger.com/' + classeName + '.ics');
+				$('.linkPane').slideDown();
+				$('.linkPane .form-group').addClass('has-success');
+				$('.modal').modal('show');
+			});
+			$('.obtenir_calendrier').click(function() {
+				classeName = $('.obtenir_calendrier_name').val();
 				$('.urlPlanning').val('http://ChronosVenger.com/' + classeName + '.ics');
 				$('.linkPane').slideDown();
 				$('.linkPane .form-group').addClass('has-success');

@@ -138,6 +138,9 @@
 
 	}
 	function getAPI($classe) {
+		$classe['classe'] = urldecode($classe['classe']);
+		$classe['classe'] = urlencode($classe['classe']);
+		
 		$url = 'http://ichronos.in/?s='.$classe['classe'].'&w='.(date('w')+$classe['semaine']+1).'&api';
 		/*
 $ch = curl_init('http://ichronos.in/?s='.$classe['classe'].'&w='.(date('w')+$classe['semaine']+35).'&api');
