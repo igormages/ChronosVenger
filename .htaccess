@@ -9,6 +9,9 @@ RewriteBase /
 #----------------------------------------------> Fin de l'activation de RewriteEngine
 
 #----------------------------------------------> Rwrite des URL
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.*)-prof.ics$ index.php?classe=$1&prof=1 [L]
 
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^(.*).ics$ index.php?classe=$1 [L]
+

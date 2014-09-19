@@ -58,8 +58,9 @@
 	function calendrier($classe) {
         require_once 'iCalcreator.class.php';
        
+        $prof = ($classe['prof'] == 1) ? 1 : 0;
         $classe = (!empty($classe['classe'])) ? $classe['classe'] :'INFOSUPB2-1';
-       
+		
         $config = array('unique_id' => md5('EPITA'));
         $cal = new vcalendar($config);
         $cal->setProperty( 'method', 'PUBLISH' );
@@ -95,13 +96,20 @@
                         $vevent->setProperty( 'dtstart', $start );
                         $vevent->setProperty( 'dtend', $end );
                         $vevent->setProperty( 'LOCATION', $event[7]);
-                        $vevent->setProperty( 'summary', $event[4]);
-                        $vevent->setProperty( 'description', $event[6]);
+                        
+                        if(!$prof) {
+	                        $vevent->setProperty( 'summary', $event[4]);
+	                        $vevent->setProperty( 'description', $event[5]. ' | ' .$event[6]);
+                        }
+                        else {
+	                        $vevent->setProperty( 'summary', $event[5]);
+	                        $vevent->setProperty( 'description', $event[4]. ' | ' .$event[6]);
+                        }
                
                 endforeach;
                 
 			for($semaine = 0; $semaine < 10; $semaine++):
-				$url = 'http://ichronos.in/?s='.$classe.'&api'.'&w='.(date('w')+$semaine+1);
+				$url = 'http://ichronos.in/?s='.$classe.'&api'.'&w='.(date('w')+$semaine-1);
 				$result = file_get_contents($url);
 				
 				//$result = file_get_contents($filename);
@@ -127,8 +135,14 @@
                         $vevent->setProperty( 'dtstart', $start );
                         $vevent->setProperty( 'dtend', $end );
                         $vevent->setProperty( 'LOCATION', $event[7]);
-                        $vevent->setProperty( 'summary', $event[4]);
-                        $vevent->setProperty( 'description', $event[6]);
+                        if(!$prof) {
+	                        $vevent->setProperty( 'summary', $event[4]);
+	                        $vevent->setProperty( 'description', $event[5]. ' | ' .$event[6]);
+                        }
+                        else {
+	                        $vevent->setProperty( 'summary', $event[5]);
+	                        $vevent->setProperty( 'description', $event[4]. ' | ' .$event[6]);
+                        }
                
                 endforeach;
                 
@@ -141,7 +155,7 @@
 		$classe['classe'] = urldecode($classe['classe']);
 		$classe['classe'] = urlencode($classe['classe']);
 		
-		$url = 'http://ichronos.in/?s='.$classe['classe'].'&w='.(date('w')+$classe['semaine']+1).'&api';
+		$url = 'http://ichronos.in/?s='.$classe['classe'].'&w='.(date('w')+$classe['semaine']-1).'&api';
 		/*
 $ch = curl_init('http://ichronos.in/?s='.$classe['classe'].'&w='.(date('w')+$classe['semaine']+35).'&api');
         $options = array(

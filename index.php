@@ -3,7 +3,13 @@
 	require_once('requires.php');
 	if(isset($_GET['classe']) AND !empty($_GET['classe'])) {
 		$classe = str_replace('.ics', '', $_GET['classe']);
-		echo calendrier(array('classe' => $classe, 'semaine' => (0)));
+		
+		if(isset($_GET['prof']) AND $_GET['prof'] == 1){
+			echo calendrier(array('classe' => $classe, 'prof' => (1), 'semaine' => (0)));		
+		}
+		else {
+			echo calendrier(array('classe' => $classe, 'semaine' => (0)));		
+		}
 		exit;
 	}	
 ?>
@@ -354,7 +360,7 @@
 			});
 			$('.obtenir_calendrier').click(function() {
 				classeName = $('.obtenir_calendrier_name').val();
-				$('.urlPlanning').val('http://ChronosVenger.com/' + classeName + '.ics');
+				$('.urlPlanning').val('http://ChronosVenger.com/' + classeName + '-prof.ics');
 				$('.linkPane').slideDown();
 				$('.linkPane .form-group').addClass('has-success');
 				$('.modal').modal('show');
